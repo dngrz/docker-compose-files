@@ -1,0 +1,9 @@
+test:
+  image: clodoaldosanchez/firebird:3.0.5
+  restart: always
+  ports:
+    - "3050:3050"
+  volumes:
+    - /root/firebird:/firebird
+  environment:
+    - ISC_PASSWORD=${CSANCHEZ_FIREBIRD_PASSWORD}
