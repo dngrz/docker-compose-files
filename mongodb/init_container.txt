@@ -1,0 +1,1 @@
+docker run clodoaldosanchez/mongo:4.2
