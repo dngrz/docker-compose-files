@@ -1,0 +1,18 @@
+ version: '2'
+ services:
+     ifx:
+         image: clodoaldosanchez/informix:14.10.FC2DE
+         environment:
+             - LICENSE=accept
+             - TZ=America/Lima
+             - DB_INIT=1 
+             - DB_EXTSTORAGE=1
+         ports:
+          - "9088:9088"
+          - "27018:27018"
+          - "27017:27017"
+          - "27883:27883"
+         privileged: true
+         volumes:
+          - /home/csanchez/docker/informix/data-ifx:/data/IFMX-CHUNKS
+
