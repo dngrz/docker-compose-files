@@ -1,0 +1,9 @@
+docker build -t clodoaldosanchez/ng-cli:7.3.9 .
+docker run clodoaldosanchez/ng-cli:7.3.9
+
+Ejecutar dentro de un proyecto:
+docker run -u $(id -u) --rm -p 4200:4200 -v "$PWD":/app trion/ng-cli ng serve -host 0.0.0.0
+docker run -u $(id -u) --rm -p 4200:4200 -v "$PWD":/app clodoaldosanchez/ng-cli:7.3.9 ng serve -host 0.0.0.0
+
+cd /home/csanchez/proyectos/ngx-admin-master
+docker run -u $(id -u) --rm -p 4200:4200 -v "$PWD":/app clodoaldosanchez/ng-cli:7.3.9 ng serve -host 0.0.0.0
